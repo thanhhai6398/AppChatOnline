@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_weight="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="false"
+        android:background="@color/nav_color"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/back_setting2"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_back"/>
+
+        <TextView
+            android:layout_marginRight="44dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chỉnh sửa thông tin"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout"
+        android:layout_weight="4">
+
+        <ImageView
+            android:id="@+id/imgCoverImageEdit"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            app:srcCompat="@drawable/zalo" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imgAvtEdit"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+
+            android:layout_below="@+id/imgCoverImageEdit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-100dp"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:scaleType="centerCrop"
+            android:src="@color/white"
+            app:civ_border_color="#FFFFFFFF"
+            app:civ_border_width="3dp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_weight="3">
+        <EditText
+            android:id="@+id/edtNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên zalo"
+            android:textSize="30dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbtnMaleEdit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Nam"
+                android:textSize="30dp"
+                android:layout_marginRight="60dp"/>
+
+            <RadioButton
+                android:id="@+id/rbtnFemaleEdit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Nữ"
+                android:textSize="30dp"/>
+        </RadioGroup>
+        <EditText
+            android:id="@+id/edtBirthEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="01/01/2000"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:text="Cập nhật"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="1"/>
+</LinearLayout>
